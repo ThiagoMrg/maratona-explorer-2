@@ -1,0 +1,131 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Variáveis */
+  --bg-dark: #EDF2FF;
+  --text-dark: #00082F;
+  --hoover-dark: #253db1;
+  --list-color: #4263EB;
+}
+
+a {
+  text-decoration: none;
+}
+
+body.dark {
+  --bg-dark: #00082F;
+  --text-dark: #EDF2FF;
+  --hoover-dark: #0c2abd;
+}
+
+body {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  text-align: center;
+  width: 300px;
+  margin: 60px auto;
+}
+
+img {
+  width: 100%; /* 100% em relação ao pai. Nesse caso o pai é o container. Então é 100% de 300px */
+  
+  border-radius: 50%;
+  border: 4px solid #4263EB;
+  padding: 3.7px;
+  width: 100px;
+  height: 100px;
+
+}
+
+h1 {
+  margin-top: 24px;
+  margin-bottom: 8px;
+
+  font-size: 32px;
+}
+
+
+p {
+  font-size: 18px;
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+
+ul {
+  list-style: none;
+  margin: 48px 0;
+}
+
+
+ul li a {
+  height: 53px;
+  display: flex; /* Por padrão a tag a tem o display inline. Mas inline não pode receber propriedades como margin, width e height */
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--list-color);
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+
+  margin-bottom: 16px;
+  border-radius: 6px;
+
+  transition: background 400ms;
+}
+
+ul li a:hover {
+  background: var(--hoover-dark);
+
+}
+
+
+footer {
+  font-weight: 400;
+  font-size: 12px;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: opacity 400ms;
+}
+
+footer:hover {
+  opacity: 1;
+}
+
+footer a{
+  color: var(--text-dark);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 100px;
+}
+
+#darkmode {
+  height: 30px;
+  width: 100px;
+
+  background: var(--list-color);
+  border-radius: 6px;
+  border: none;
+  color: white;
+}
+
+#cleanMode {
+  width: 100px;
+  height: 30px;
+  background: var(--list-color);
+  border-radius: 6px;
+  border: none;
+  color: white;
+}
